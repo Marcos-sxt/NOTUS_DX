@@ -1,0 +1,42 @@
+{
+  "name": "notus-dx",
+  "version": "1.0.0",
+  "description": "Notus Labs DX Research - Smart Wallet, Swaps, Transfers and Liquidity Pools integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node scripts/00_healthcheck.ts",
+    "wallet": "ts-node scripts/01_wallet.ts",
+    "transfer": "ts-node scripts/02_transfer.ts",
+    "swap": "ts-node scripts/03_swap.ts",
+    "portfolio": "ts-node scripts/04_portfolio.ts",
+    "pools": "ts-node scripts/05_pools.ts",
+    "web3auth": "ts-node scripts/06_web3auth_test.ts",
+    "privy": "ts-node scripts/07_privy_flow_test.ts",
+    "privy-real": "ts-node scripts/08_privy_real_test.ts",
+    "test-endpoints": "ts-node scripts/02_transfer_test.ts",
+    "test": "npm run wallet && npm run transfer && npm run swap && npm run portfolio && npm run pools"
+  },
+  "keywords": [
+    "notus",
+    "web3",
+    "blockchain",
+    "dx",
+    "research"
+  ],
+  "author": "Notus DX Research Participant",
+  "license": "MIT",
+  "dependencies": {
+    "@privy-io/server-auth": "^1.32.5",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/uuid": "^9.0.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
